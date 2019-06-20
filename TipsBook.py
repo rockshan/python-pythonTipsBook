@@ -27,3 +27,14 @@ print(bark.__name) # This will print yell only
 
 sorted(range(-5, 6), key=abs)#sort by absolute value
 sorted(range(-5, 6), key=lambda x: x*x)# same result
+
+
+#What’s a lexical closure? It’s just a fancy name for a function that remembers the 
+#values from the enclosing lexical scope even when the program flow is no longer in 
+#that scope. Here’s a (fairly academic) example to illustrate the idea:
+def make_adder(n):
+  return lambda x: x + n
+
+plus_3 = make_adder(3)
+ plus_3(4)
+output: 7  
