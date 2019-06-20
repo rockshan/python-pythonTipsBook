@@ -23,3 +23,7 @@ def yell(5):
 del yell
 bark = yell
 print(bark.__name) # This will print yell only
+
+
+sorted(range(-5, 6), key=abs)#sort by absolute value
+sorted(range(-5, 6), key=lambda x: x*x)# same result
