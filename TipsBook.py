@@ -11,3 +11,15 @@ def make_adder(n):
 
 plus_3 = make_adder(3)
 plus_5 = make_adder(5)
+
+#Lambdas are in line function 
+(lambda x, y: x + y)(5, 3)
+
+#each function have a name which can accessed by self.__name
+
+def yell(5):
+  return 5
+
+del yell
+bark = yell
+print(bark.__name) # This will print yell only
